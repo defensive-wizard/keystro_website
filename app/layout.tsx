@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
 import Script from "next/script";
-
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -44,7 +43,11 @@ export default function RootLayout({
           content="https://keystro.app/keystro_banner.jpg"
         />
         <link rel="icon" href="favicon.ico" />
-        <Script src="https://cdn.paritydeals.com/banner.js" />
+        <Script id="mixpanel" strategy="afterInteractive">
+          {`
+                    `}
+        </Script>
+
         <title>Keystro app</title>
       </head>
 

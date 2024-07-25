@@ -13,11 +13,19 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import WhyYouNeedThis from "../components/why-you-need-this";
 
+import mixpanel from "mixpanel-browser";
+
 export default function Home() {
   const [isMac, setIsMac] = useState(false);
   const [isWindows, setIsWindows] = useState(false);
 
   useEffect(() => {
+    mixpanel.init("24050a38c999428ff1772de245bfcfcb", {
+      debug: true,
+      track_pageview: true,
+      persistence: "localStorage",
+    });
+
     const isMac =
       typeof window !== "undefined"
         ? navigator.platform.toUpperCase().indexOf("MAC") >= 0
