@@ -43,10 +43,11 @@ export default function RootLayout({
           content="https://keystro.app/keystro_banner.jpg"
         />
         <link rel="icon" href="favicon.ico" />
-        <Script id="mixpanel" strategy="afterInteractive">
-          {`
-                    `}
-        </Script>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="ab6f30ec-ee8f-49dc-bebc-bf95cb899c0c"
+        ></Script>
 
         <title>Keystro app</title>
       </head>
